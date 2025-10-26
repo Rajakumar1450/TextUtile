@@ -4,8 +4,8 @@ import Navbar from "./Components/Navbar";
 import About from "./Components/About";
 import TextForm from "./Components/TextForm";
 import Alert from "./Components/Alert";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import { /* BrowserRouter */ HashRouter as Router, Routes, Route } from "react-router-dom";
+/* BrousRouter doesn't support when we deploy on github */
 function App() {
   const [mode, setmode] = useState("light");
   const [modeText, setmodeText] = useState("dark mode");
@@ -30,7 +30,7 @@ function App() {
       showAlert("Dark mode is enabled", "success");
       setmyStyle({
         color: "white",
-        backgroundColor: "#a0caedff",
+        backgroundColor: "rgb(36 74 104)",
         border:'1px solid white'
       });
     } else {
@@ -42,6 +42,7 @@ function App() {
       setmyStyle({
       color: "black",
       backgroundColor: "white",
+      border:"2 px solid #191a1aff"
     });
     }
   };

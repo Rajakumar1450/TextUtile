@@ -101,22 +101,43 @@ export default function TextForm(props) {
           className="btn btn-success"
           onClick={handleUPclick}
           //style={{ backgroundColor: "#008000", color: "white" }}
+          disabled={text.length === 0}
         >
           convert to uppercase
         </button>
-        <button className="btn btn-success mx-2" onClick={handleLoclick}>
+        <button
+          className="btn btn-success mx-2 my-1"
+          onClick={handleLoclick}
+          disabled={text.length === 0}
+        >
           convert to lowercase
         </button>
-        <button className="btn btn-success mx-1" onClick={handleclearclick}>
+        <button
+          className="btn btn-success mx-1 my-1"
+          onClick={handleclearclick}
+          disabled={text.length === 0}
+        >
           clear Text
         </button>
-        <button className="btn btn-success mx-1" onClick={handletitleclick}>
+        <button
+          className="btn btn-success mx-1 my-1"
+          onClick={handletitleclick}
+          disabled={text.length === 0}
+        >
           Title case
         </button>
-        <button className="btn btn-success mx-1" onClick={handleCopyclick}>
+        <button
+          className="btn btn-success mx-1 my-1"
+          onClick={handleCopyclick}
+          disabled={text.length === 0}
+        >
           copyText
         </button>
-        <button className="btn btn-success" onClick={hadlespaceclick}>
+        <button
+          className="btn btn-success my-1"
+          onClick={hadlespaceclick}
+          disabled={text.length === 0}
+        >
           remove extra space
         </button>
       </div>
@@ -132,7 +153,7 @@ export default function TextForm(props) {
             text
               .trim()
               .split(/\s+/)
-              .filter((word) => word.length !== 0).length
+              .filter((word) => word.length !== 0).length //filter wo chiz remove kar deta hai jo ki iske andar ka function false return karta hai
           }
           Words and {text.length} characters
         </p>

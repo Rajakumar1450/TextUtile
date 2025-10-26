@@ -16,7 +16,7 @@ export default function About(props) {
                 aria-controls="collapseOne"
                 style={props.myStyle}
               >
-                TextUtile — your smart, no-fuss text companion.
+                <strong>TextUtile — your smart, no-fuss text companion.</strong>
               </button>
             </h2>
             <div
@@ -49,7 +49,7 @@ export default function About(props) {
                 aria-controls="collapseTwo"
                 style={props.myStyle}
               >
-                Why you’ll love it:
+                <strong>Why you’ll love it:</strong>
               </button>
             </h2>
             <div
@@ -81,7 +81,7 @@ export default function About(props) {
                 aria-controls="collapseThree"
                 style={props.myStyle}
               >
-                Our goal is simple
+                <strong>Our goal is simple</strong>
               </button>
             </h2>
             <div
